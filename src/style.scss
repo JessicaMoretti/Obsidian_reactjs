@@ -1,0 +1,220 @@
+$colorPrimario: rgb(255, 167, 234);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana,
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#navContainer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+
+    .NavBar {
+        margin-right: 20px;
+
+        a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 20px;
+            padding: 1rem;
+
+            &:hover {
+                color: #fff;
+                background-color: black;
+                padding: 1rem;
+                transition: 0.2s;
+
+
+            }
+        }
+    }
+}
+
+.container {
+    padding-top: 25px;
+    justify-content: center;
+    min-height: 100%;
+    position: relative;
+    align-items: center;
+
+    #cardContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 5fr));
+        grid-gap: 1rem;
+        margin-top: 1rem;
+
+    }
+
+    #cards {
+        overflow: hidden;
+        border: 2px solid rgb(200, 200, 200);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+        list-style: none;
+        margin: 0.6rem 0;
+
+        &:hover {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover img {
+            transform: scale(1.15);
+        }
+
+        img {
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            transition: transform .75s;
+
+        }
+
+        .cardTxt {
+            padding-top: 25px;
+            text-align: center;
+            text-decoration: solid;
+        }
+
+
+        .confirmar {
+            padding: 1rem;
+            font-size: 10px;
+            border-radius: 10px;
+            margin-bottom: 0.5rem;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+
+
+    }
+
+    #cardDetalle {
+        border: 2px solid rgb(128, 128, 128);
+        border-radius: 10px;
+        display:grid;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.03, 1.03);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .detalleTxt {
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+
+}
+
+.contenedorBtnCount {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: $colorPrimario;
+    border: none;
+    color: #fff;
+
+    &:hover {
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s ease-in-out;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+
+    }
+}
+
+.carritoItemContainer {
+    display: grid;
+    font-size: 16px;
+}
+
+#link{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;   
+    display:block;
+    margin-top: 1rem;
+
+    img{
+        padding-left: 1.5rem;
+    }
+
+}
+.carritoTextContainer {
+    display:grid;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#main__footer{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 1,2;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+    #contacto__redes{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+    }
+
+    #contacto__w{
+        font-size: 1.5rem;
+        color: $colorPrimario;
+        padding-bottom: 1rem;
+    }
+
+    #redes a{
+        text-decoration: none;
+        justify-self: center;
+        padding: 1rem;
+        color: rgb(0, 0, 0);
+        font-size: 2.5rem;
+        padding-top: 3rem;
+    }
+}
